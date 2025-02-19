@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnico de Enfermagem</title>
+    <link rel="stylesheet" href="tecnico.css">
+    <script src="tecnico.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Formulário - Técnico de Enfermagem</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="auxiliar.html">Auxiliar de Enfermagem</a></li>
+            <li><a href="tecnico.html">Técnico de Enfermagem</a></li>
+            <li><a href="enfermeiro.html">Enfermeiro</a></li>
+        </ul>
+    </nav>
+
+    <div class="video-container">
+        <video src="videos_flux/tecnico.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <form id="tecnico-form">
+        <label for="leito">Número do leito:</label>
+        <input type="number" id="leito" name="leito" required min="0" step="1">
+    
+    
+        <fieldset>
+            <legend>Quantidade de medicação:</legend>
+        
+            <div>
+                <input type="checkbox" name="via[]" value="VO" id="vo" onchange="toggleInput('vo')">
+                <label for="vo">VO</label>
+                <input type="number" id="vo_qty" name="vo_qty" min="0" placeholder="Quantidade" style="display:none;">
+            </div>
+        
+            <div>
+                <input type="checkbox" name="via[]" value="IV" id="iv" onchange="toggleInput('iv')">
+                <label for="iv">IV</label>
+                <input type="number" id="iv_qty" name="iv_qty" min="0" placeholder="Quantidade" style="display:none;">
+            </div>
+        
+            <div>
+                <input type="checkbox" name="via[]" value="IM" id="im" onchange="toggleInput('im')">
+                <label for="im">IM</label>
+                <input type="number" id="im_qty" name="im_qty" min="0" placeholder="Quantidade" style="display:none;">
+            </div>
+        
+            <div>
+                <input type="checkbox" name="via[]" value="VS" id="vs" onchange="toggleInput('vs')">
+                <label for="vs">VS</label>
+                <input type="number" id="vs_qty" name="vs_qty" min="0" placeholder="Quantidade" style="display:none;">
+            </div>
+        
+            <div>
+                <input type="checkbox" name="via[]" value="SC" id="sc" onchange="toggleInput('sc')">
+                <label for="sc">SC</label>
+                <input type="number" id="sc_qty" name="sc_qty" min="0" placeholder="Quantidade" style="display:none;">
+            </div>
+        </fieldset>
+        
+        <script>
+        function toggleInput(via) {
+            const checkbox = document.getElementById(via);
+            const input = document.getElementById(`${via}_qty`);
+            input.style.display = checkbox.checked ? 'inline-block' : 'none';
+            if (!checkbox.checked) {
+                input.value = '';
+            }
+        }
+        </script>
+        
+    
+        <label for="insulina">Suplementação de insulina:</label>
+        <select id="insulina" name="insulina">
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+    
+        <label for="manha">Paciente pela manhã:</label>
+        <select id="manha" name="manha">
+            <option value="dormindo">Dormindo</option>
+            <option value="acordado">Acordado</option>
+        </select>
+    
+        <label for="peso">Peso em jejum:</label>
+        <select id="peso" name="peso">
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+    
+        <label for="solicitante">Solicitante:</label>
+        <select id="solicitante" name="solicitante">
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+    
+        <button type="submit" id="submitbtn">Enviar</button>
+    </form>
+</body>
+<footer>
+    <p>&copy; 2025 NurseAnalytics. Todos os direitos reservados.</p>
+  </footer>
+</html>

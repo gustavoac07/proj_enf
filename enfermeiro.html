@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enfermeiro</title>
+  <link rel="stylesheet" href="enfermeiro.css">
+  <script src="enfermeiro.js" defer></script> <!-- Link do JavaScript -->
+</head>
+<body>
+  <header>
+    <h1>Formulário - Enfermeiro </h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="auxiliar.html">Auxiliar de Enfermagem</a></li>
+      <li><a href="tecnico.html">Técnico de Enfermagem</a></li>
+      <li><a href="enfermeiro.html">Enfermeiro</a></li>
+    </ul>
+  </nav>
+
+  <div class="video-container">
+    <video src="videos_flux/enfermeira.mp4" autoplay loop muted playsinline></video>
+  </div>
+
+  <form id="enfermeiro-form">
+    <label for="leito">Número do leito:</label>
+    <input type="number" id="leito" name="leito" required min="0" step="1">
+
+    <label for="gerenciado">Paciente é gerenciado?</label>
+    <select name="gerenciado">
+      <option>Sim</option>
+      <option>Não</option>
+    </select>
+
+    <label for="curativos">Necessita de curativos?</label>
+    <select name="curativos">
+      <option>Complexo</option>
+      <option>Simples</option>
+      <option>Não tem</option>
+    </select>
+
+    <label for="risco">Risco de queda:</label>
+    <select name="risco">
+      <option>Alto</option>
+      <option>Baixo</option>
+      <option>Não</option>
+    </select>
+
+    <label for="reconciliacao">Foi necessária reconciliação de medicação?</label>
+    <select name="reconciliacao">
+      <option>Sim</option>
+      <option>Não</option>
+    </select>
+
+    <label for="reabilitacao">Paciente tem reabilitação ou diálise?</label>
+    <select name="reabilitacao">
+      <option>Reabilitação</option>
+      <option>Diálise</option>
+      <option>Não tem</option>
+    </select>
+
+    <button type="submit">Enviar</button>
+  </form>
+  <footer>
+    <p>&copy; 2025 NurseAnalytics. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

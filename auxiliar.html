@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auxiliar de Enfermagem</title>
+  <link rel="stylesheet" href="auxiliar.css">
+  <script src="auxiliar.js" defer></script> <!-- Link do JavaScript -->
+</head>
+<body>
+  <header>
+    <h1>Formulário - Auxiliar de Enfermagem</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="auxiliar.html">Auxiliar de Enfermagem</a></li>
+      <li><a href="tecnico.html">Técnico de Enfermagem</a></li>
+      <li><a href="enfermeiro.html">Enfermeiro</a></li>
+    </ul>
+  </nav>
+
+  <div class="video-container">
+    <video src="videos_flux/auxiliar.mp4" autoplay loop muted playsinline></video>
+  </div>
+
+  <main>
+    <form id="auxiliar-form">
+      <label for="leito">Número do leito:</label>
+      <input type="number" id="leito" name="leito" required min="0" step="1">
+
+      <label for="glicemias">Quantas verificações de glicemia?</label>
+      <input type="number" id="glicemias" name="glicemias" placeholder="Digite o número" required>
+
+      <label for="acamados">É acamados?</label>
+      <select id="acamados" name="acamados" required>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <label for="auxilios">É auxílios?</label>
+      <select id="auxilios" name="auxilios" required>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <label for="banhos">É necessário auxilio para banhos?</label>
+      <select id="banhos" name="banhos" required>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <label for="tempoBanho">Tempo médio do banho (min):</label>
+      <input type="number" id="tempoBanho" name="tempoBanho" placeholder="Digite em minutos" required>
+
+      <label for="horarioBanho">Horário do banho:</label>
+      <select id="horarioBanho" name="horarioBanho" required>
+        <option value="manha">Manhã</option>
+        <option value="tarde">Tarde</option>
+        <option value="resistente">Paciente resistente</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NurseAnalytics. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

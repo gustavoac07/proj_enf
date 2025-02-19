@@ -1,0 +1,155 @@
+/* Geral */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #3f70d8;
+  color: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid #a29bfe;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #202628;
+  border-bottom: 2px solid #ddd;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+nav ul li a:hover {
+  background-color: #00b894;
+  transform: translateY(-3px);
+}
+
+main {
+  padding: 3rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+main h2, main h3 {
+  color: #2d3436;
+}
+
+ul li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #2d3436;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background-color: #2d3436;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+footer a {
+  color: #b4c8a9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  main {
+      padding: 2rem;
+      max-width: 90%;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  main {
+      padding: 1.5rem;
+  }
+
+  .video-container {
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+      padding: 2rem 1rem;
+  }
+
+  header h1 {
+      font-size: 1.5rem;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  main {
+      padding: 1rem;
+  }
+}

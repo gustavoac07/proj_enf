@@ -1,0 +1,335 @@
+/* Geral */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  background-color: #f2f4f8;
+  color: #333;
+}
+
+header {
+  background-color: #00FFFF; /* Azul Claro */
+  color: #2d3436;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid #00bcd4;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #2d3436;
+  border-top: 2px solid #ddd;
+  margin-top: 2rem;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+nav ul li a:hover {
+  background-color: #00bcd4;
+  transform: translateY(-3px);
+}
+
+main {
+  padding: 3rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+main h2, main h3 {
+  color: #2d3436;
+}
+
+ul li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #636e72;
+}
+
+button {
+  background-color: #00FFFF;
+  color: #2d3436;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  margin-top: 2rem;
+}
+
+button:hover {
+  background-color: #00bcd4;
+  transform: translateY(-3px);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background-color: #2d3436;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+footer a {
+  color: #00FFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo de Formulário */
+form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+  display: grid; /* Layout em grid para melhor organização */
+  grid-template-columns: 1fr; /* Uma coluna para labels e inputs */
+  gap: 1rem; /* Espaçamento entre os itens do grid */
+}
+
+form h2 {
+  color: #00bcd4;
+  text-align: center;
+  margin-bottom: 1rem; /* Espaçamento ajustado */
+  grid-column: 1 / -1; /* Ocupa toda a largura */
+}
+
+label {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.3rem; /* Espaçamento ajustado */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select { /* Estilo aplicado a selects também */
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box; /* Garante que padding não afete a largura */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px rgba(102, 0, 0, 0.5);
+  outline: none; /* Remove a borda padrão do foco (opcional) */
+}
+
+textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+/* Estilo para checkboxes e radios */
+.checkbox-group, .radio-group {
+  display: flex;
+  flex-direction: column; /* Alinha verticalmente */
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-group label, .radio-group label {
+  display: flex;
+  align-items: center; /* Alinha checkbox/radio e texto */
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+button[type="submit"], button[type="reset"] { /* Estilo unificado para os botões */
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #00bcd4;
+  transform: translateY(-3px);
+}
+
+button[type="reset"] {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+}
+
+button[type="reset"]:hover {
+  background-color: #b5b5b5;
+  transform: translateY(-3px);
+}
+
+/* Estilo de Mensagem de Erro */
+.error {
+  color: #00bcd4; /* Cor de erro */
+  font-size: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo de Mensagem de Sucesso */
+.success {
+  color: #4CAF50; /* Cor de sucesso */
+  font-size: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo para vídeos */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 600px) {
+  header h1 {
+      font-size: 2rem; /* Tamanho de fonte menor */
+  }
+
+  nav ul {
+      flex-direction: column; /* Layout de navegação empilhado */
+      margin-top: 1rem;
+  }
+
+  nav ul li {
+      margin: 0.5rem 0; /* Menos margem entre os itens */
+  }
+
+  main {
+      padding: 2rem; /* Menos padding para telas menores */
+  }
+
+  form {
+      padding: 1.5rem;
+  }
+
+  button {
+      padding: 0.8rem 1.5rem; /* Botões com padding menor */
+  }
+
+  footer {
+      font-size: 0.9rem;
+  }
+}
+
+/* Para telas médias (tablets) */
+@media (max-width: 768px) {
+  main {
+      padding: 2.5rem;
+  }
+
+  form {
+      padding: 1.8rem;
+  }
+
+  button {
+      padding: 0.9rem 1.7rem;
+  }
+}
+
+/* Para telas grandes (desktops) */
+@media (min-width: 1200px) {
+  main {
+      max-width: 1000px; /* Aumenta o tamanho máximo do conteúdo */
+  }
+
+  header h1 {
+      font-size: 3rem; /* Tamanho de fonte maior */
+  }
+
+  nav ul li {
+      margin: 0 2rem;
+  }
+}
+form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
